@@ -114,4 +114,6 @@ sudo pacman -R manjaro-hello
 sudo pacman -R vim
 
 # NOTES FOR NEXT SCRIPT'S UPDATE
-Remove thunderbird since attachments are downloaded automatically on the computer. Better use the webmail services so that files containing potential malwares stay on the server rather than on the computer itself.
+# Remove thunderbird since attachments are downloaded automatically on the
+# computer. Better use the webmail services so that files containing
+# potential malwares stay on the server rather than on the computer itself.
