@@ -2,6 +2,10 @@
 # Install a VPN first for more security if you want
 # before you download and install the packages.
 
+# This introduction paragraph is here for you to customize the script.
+# If you don't want to do so, you can just run it and say no to the
+# packages you don't want to install. If you want to do so, read this:
+
 # <- Hashatgs "#" are disablind the code in order to write
 # anything you want in here. If you want to disable a line
 # of code, put it at the left of the line you want to disable.
@@ -41,7 +45,7 @@ sudo pacman -S base-devel
 # Gparted = Disk Manager
 # Mozilla Firefox = Web Browser
 # Tor Browser = Anonymous Web Browser
-# Leaf = Notepad
+# Leafpad = Notepad
 # LibreOffice = Office Suite
 # GIMP = Image and Photograph Editor
 # File Roller = Archive manager zip etc...
@@ -51,7 +55,7 @@ sudo pacman -S base-devel
 # KsysGuard = ksysguard
 
 
-sudo pacman -S nemo, gparted, firefox, torbrowser-launcher, leaf, libreoffice, gimp, file-roller, vlc, bleachbit, deluge, ksysguard
+sudo pacman -S nemo gparted firefox torbrowser-launcher leaf gimp file-roller vlc bleachbit deluge ksysguard
 
 
 
@@ -72,13 +76,14 @@ sudo pacman -S nemo, gparted, firefox, torbrowser-launcher, leaf, libreoffice, g
 # Inkscape = Vector Graphics Editor
 # Lutris = Game Compatibility Platform
 # LXTerm = Minimalistic Linux Terminal
+# Nano = CLI Text Editor
 # OBS = Live Streaming/Video Recording Software
 # Steam = Gaming Platform - Special version for Manjaro
 # Virtualbox = Virtual Machine Host Program
 # Wireshark = Network Protocol Analyzer Tool
 
 
-sudo pacman -S atom, audacity, bitwarden, blender, bless, discord, exiftool, inkscape, lutris, lxterminal, obs-studio, steam-manjaro, virtualbox, wireshark-qt
+sudo pacman -S atom audacity bitwarden blender bless discord exiftool inkscape lutris lxterminal nano obs-studio steam-manjaro virtualbox wireshark-qt
 
 
 
@@ -96,8 +101,17 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Cinnamon = Windows Like
 LXDE = Lightweight, Minimalist, High Performance
 
-sudo pacman -S cinnamon, lxde
+# Please remove the desktop environment you already installed
+# from this line of code
+
+sudo pacman -S cinnamon lxde kde
 
 
 # CUSTOM PACKAGES TO REMOVE
+# Can display an error message "target not found"
+# if the packaged are not installed. In that case it's ok just skip
 sudo pacman -R manjaro-hello
+sudo pacman -R vim
+
+# NOTES FOR NEXT SCRIPT'S UPDATE
+Remove thunderbird since attachments are downloaded automatically on the computer. Better use the webmail services so that files containing potential malwares stay on the server rather than on the computer itself.
