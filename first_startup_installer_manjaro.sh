@@ -74,6 +74,7 @@ sudo pacman -S nemo gparted firefox torbrowser-launcher leaf gimp file-roller vl
 # Discord = Internet Voice/Text Chat Client
 # Exiftool = Metadata Editor
 # Inkscape = Vector Graphics Editor
+# KdenLive = Video Editor
 # Lutris = Game Compatibility Platform
 # LXTerm = Minimalistic Linux Terminal
 # Nano = CLI Text Editor
@@ -83,7 +84,7 @@ sudo pacman -S nemo gparted firefox torbrowser-launcher leaf gimp file-roller vl
 # Wireshark = Network Protocol Analyzer Tool
 
 
-sudo pacman -S atom audacity bitwarden blender bless discord exiftool inkscape lutris lxterminal nano obs-studio steam-manjaro virtualbox wireshark-qt
+sudo pacman -S atom audacity bitwarden blender bless discord exiftool inkscape kdenlive lutris lxterminal nano obs-studio steam-manjaro virtualbox wireshark-qt
 
 
 
