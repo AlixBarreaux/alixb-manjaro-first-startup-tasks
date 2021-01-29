@@ -22,6 +22,17 @@ sudo pacman -S base-devel
 
 
 
+# DESKTOP ENVIRONMENTS - The way your Linux looks like
+# Cinnamon = Windows Like (but without the problems of Windows of course)
+# LXDE = Lightweight, Minimalist, High Performance
+
+# Please remove the desktop environment you already installed
+# from this line of code
+
+sudo pacman -S cinnamon lxde cinnamon
+
+
+
 # SOFTWARE RELATED PACKAGES
 
 # ESSENTIALS FOR ANY USER
@@ -100,16 +111,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Install some Python Libraries
 pip install kivy
 
-
-
-# DESKTOP ENVIRONMENTS - The way your Linux looks like
-Cinnamon = Windows Like (but without the problems of Windows of course)
-LXDE = Lightweight, Minimalist, High Performance
-
-# Please remove the desktop environment you already installed
-# from this line of code
-
-sudo pacman -S cinnamon lxde kde
 
 
 # CUSTOM PACKAGES TO REMOVE
