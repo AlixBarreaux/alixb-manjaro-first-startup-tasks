@@ -1,28 +1,13 @@
 #!/bin/bash
 # Install a VPN first for more security if you want
-# before you download and install the packages.
+# before you download and install the packages!
 
-# This introduction paragraph is here for you to customize the script.
-# If you don't want to do so, you can just run it and say no to the
-# packages you don't want to install. If you want to do so, read this:
+# Tasks are ordered by priority and packages by alphabetical order
 
-# <- Hashatgs "#" are disablind the code in order to write
-# anything you want in here. If you want to disable a line
-# of code, put it at the left of the line you want to disable.
-# You must do it for EACH SINGLE line you want to disable.
-# Alternatively, you can just remove the line of code.
-
-# If you just want to remove one or several packages you
-# can just delete the names with the comma ","
-# Example: We don't want leaf and nemo to be installed:
-# sudo pacman -S nemo, gparted, firefox, leaf, libreoffice
-# Becomes now:
-# sudo pacman -S gparted, firefox, libreoffice
-# Obviously there must be no space at the end and the beginning
-# of the line and no hastag "#" for it to be run.
-# Each package name must be separated by a comma ","
-# Don't put a comma at the end of the line of code
-
+# Please verify manually if all the packages are installed correctly
+# since it's possible to get some errors. If there are some, this program
+# could simply skip to the next package to install and return an error
+# message in the terminal.
 
 
 
@@ -41,21 +26,37 @@ sudo pacman -S base-devel
 
 # ESSENTIALS FOR ANY USER
 
-# Nemo = File Manager
-# Gparted = Disk Manager
-# Mozilla Firefox = Web Browser
-# Tor Browser = Anonymous Web Browser
-# Leafpad = Notepad
-# LibreOffice = Office Suite
-# GIMP = Image and Photograph Editor
-# File Roller = Archive manager zip etc...
-# VLC = MultiMedia Reader
+
+# Official Packages
+
 # Bleachbit = Unused Data Cleaner
 # Deluge = Torrent Client
+# File Roller = Archive manager zip etc...
+# Firefox = Web Browser
+# GIMP = Image and Photograph Editor
+# Gparted = Disk Manager
 # KsysGuard = ksysguard
+# Leafpad = Notepad
+# LibreOffice = Office Suite
+# Nemo = File Manager
+# Tor Browser = Anonymous Web Browser
+# VLC = MultiMedia Reader
 
 
-sudo pacman -S nemo gparted firefox torbrowser-launcher leaf gimp file-roller vlc bleachbit deluge ksysguard
+sudo pacman -S bleachbit deluge file-roller firefox gimp gparted ksysguard leafpad libreoffice nemo torbrowser-launcher vlc
+
+
+
+# Softwares not on official repository
+# Open the page of the software to install in firefox web browser
+# Warning: You can disable these lines of code to avoid overloading
+# your computer's RAM by opening too much tabs in your web browser.
+# You can tell this script to use another browser than Firefox to open
+# the links you want in several tabs.
+
+# Balena Etcher
+
+firefox https://www.balena.io/etcher
 
 
 
@@ -68,7 +69,7 @@ sudo pacman -S nemo gparted firefox torbrowser-launcher leaf gimp file-roller vl
 
 # Atom = Code IDE
 # Audacity = Sound Editor
-# Bitwarden = Password Manager (Requires Internet)
+# Bitwarden = Password Manager
 # Blender = 3D Modelling
 # Bless = Hexadecimal Editor
 # Discord = Internet Voice/Text Chat Client
@@ -96,10 +97,13 @@ sudo pacman -S atom audacity bitwarden blender bless discord exiftool inkscape k
 # Install RustLang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+# Install some Python Libraries
+pip install kivy
+
 
 
 # DESKTOP ENVIRONMENTS - The way your Linux looks like
-Cinnamon = Windows Like
+Cinnamon = Windows Like (but without the problems of Windows of course)
 LXDE = Lightweight, Minimalist, High Performance
 
 # Please remove the desktop environment you already installed
@@ -110,7 +114,9 @@ sudo pacman -S cinnamon lxde kde
 
 # CUSTOM PACKAGES TO REMOVE
 # Can display an error message "target not found"
-# if the packaged are not installed. In that case it's ok just skip
+# if the packages you try to uninstall are not installed.
+# In that case it's ok just skip
+
 sudo pacman -R manjaro-hello
 sudo pacman -R vim
 
