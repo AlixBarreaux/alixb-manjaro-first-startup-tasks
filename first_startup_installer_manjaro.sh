@@ -6,7 +6,7 @@
 
 # Please verify manually if all the packages are installed correctly
 # since it's possible to get some errors. If there are some, this program
-# could simply skip to the next package to install and return an error
+# could simply skip to the next package to install and display an error
 # message in the terminal.
 
 
@@ -42,6 +42,7 @@ sudo pacman -S cinnamon lxde cinnamon
 
 # Bleachbit = Unused Data Cleaner
 # Deluge = Torrent Client
+# Etcher = Flash OS images to SD cards & USB drives
 # File Roller = Archive manager zip etc...
 # Firefox = Web Browser
 # GIMP = Image and Photograph Editor
@@ -54,7 +55,7 @@ sudo pacman -S cinnamon lxde cinnamon
 # VLC = MultiMedia Reader
 
 
-sudo pacman -S bleachbit deluge file-roller firefox gimp gparted ksysguard leafpad libreoffice nemo torbrowser-launcher vlc
+sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguard leafpad libreoffice nemo torbrowser-launcher vlc
 
 
 
@@ -65,9 +66,7 @@ sudo pacman -S bleachbit deluge file-roller firefox gimp gparted ksysguard leafp
 # You can tell this script to use another browser than Firefox to open
 # the links you want in several tabs.
 
-# Balena Etcher
-
-firefox https://www.balena.io/etcher
+#firefox https://www.example-software.com/app-to-install
 
 
 
@@ -85,6 +84,7 @@ firefox https://www.balena.io/etcher
 # Bless = Hexadecimal Editor
 # Discord = Internet Voice/Text Chat Client
 # Exiftool = Metadata Editor
+# Git = Version Control System
 # Inkscape = Vector Graphics Editor
 # KdenLive = Video Editor
 # Lutris = Game Compatibility Platform
@@ -96,13 +96,24 @@ firefox https://www.balena.io/etcher
 # Wireshark = Network Protocol Analyzer Tool
 
 
-sudo pacman -S atom audacity bitwarden blender bless discord exiftool inkscape kdenlive lutris lxterminal nano obs-studio steam-manjaro virtualbox wireshark-qt
+sudo pacman -S atom audacity bitwarden blender bless discord exiftool git inkscape kdenlive lutris lxterminal nano obs-studio steam-manjaro virtualbox wireshark-qt
 
 
 
 
 # SPECIAL INSTALLATIONS
+# Flint = Find duplicated files
 # RustLang = Rust Programming Language
+
+# Install Flint with its dependencies
+# "Won't launch" ( won't display) if
+# the depedencies aren't installed
+
+# WARNING: Install MANUALLY python2-gobject2 if
+# pytgtk requires it!
+
+sudo pacman -S pygtk
+sudo pacman -S flint
 
 
 # Install RustLang
