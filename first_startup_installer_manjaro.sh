@@ -92,7 +92,6 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 # Bless = Hexadecimal Editor
 # Brasero = CD/DVD Burner
 # Discord = Internet Voice/Text Chat Client
-# Exiftool = Metadata Editor
 # Git = Version Control System
 # Inkscape = Vector Graphics Editor
 # KdenLive = Video Editor
@@ -100,12 +99,13 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 # LXTerm = Minimalistic Linux Terminal
 # Nano = CLI Text Editor
 # OBS = Live Streaming/Video Recording Software
+# Perl Image Exiftool = Reader and rewriter of EXIF info
 # Steam = Gaming Platform - Special version for Manjaro
 # Virtualbox = Virtual Machine Host Program
 # Wireshark = Network Protocol Analyzer Tool
 
 
-sudo pacman -S atom audacity bitwarden blender bless brasero discord exiftool git inkscape kdenlive lutris lxterminal nano obs-studio steam-manjaro virtualbox wireshark-qt
+sudo pacman -S atom audacity bitwarden blender bless brasero discord git inkscape kdenlive lutris lxterminal nano obs-studio perl-image-exiftool steam-manjaro virtualbox wireshark-qt
 
 
 
@@ -140,13 +140,14 @@ pip install kivy
 
 # gnome-terminal = replaced by lxterm
 # manjaro-hello = Not needed if not read at all
+# microsoft-office-web-jak = Microsoft Office Suite -> DELETE!
+# Thunderbird = Mail Client on machine. Replaced by webmail in browser.
 # vim = replaced by nano
+# xed = replaced by leafpad
 
 sudo pacman -R gnome-terminal
 sudo pacman -R manjaro-hello
+sudo pacman -R microsoft-office-web-jak
+sudo pacman -R thunderbird
 sudo pacman -R vim
-
-# NOTES FOR NEXT SCRIPT'S UPDATE
-# Remove thunderbird since attachments are downloaded automatically on the
-# computer. Better use the webmail services so that files containing
-# potential malwares stay on the server rather than on the computer itself.
+sudo pacman -R xed
