@@ -1,4 +1,8 @@
 #!/bin/bash
+
+# WARNING: READ EVERYTHING BEFORE YOU DO ANYTHING
+# OR UNEXPECTED THINGS COULD HAPPEN!
+
 # Install a VPN first for more security if you want
 # before you download and install the packages!
 
@@ -13,12 +17,16 @@
 
 
 # ESSENTIAL SYSTEM RELATED PACKAGES
+
 # Upgrade pacman database cache
 sudo pacman -Syy
+
 # Upgrade 
 sudo pacman -Syu
+
 # Package Builder (for the AUR packages with GIT)
 sudo pacman -S base-devel
+
 
 
 
@@ -29,7 +37,7 @@ sudo pacman -S base-devel
 # Please remove the desktop environment you already installed
 # from this line of code
 
-sudo pacman -S cinnamon lxde cinnamon
+sudo pacman -S lxde
 
 
 
@@ -82,12 +90,13 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 # Bitwarden = Password Manager
 # Blender = 3D Modelling
 # Bless = Hexadecimal Editor
+# Brasero = CD/DVD Burner
 # Discord = Internet Voice/Text Chat Client
 # Exiftool = Metadata Editor
 # Git = Version Control System
 # Inkscape = Vector Graphics Editor
 # KdenLive = Video Editor
-# Lutris = Game Compatibility Platform
+# Lutris = Video Game Manager
 # LXTerm = Minimalistic Linux Terminal
 # Nano = CLI Text Editor
 # OBS = Live Streaming/Video Recording Software
@@ -96,7 +105,7 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 # Wireshark = Network Protocol Analyzer Tool
 
 
-sudo pacman -S atom audacity bitwarden blender bless discord exiftool git inkscape kdenlive lutris lxterminal nano obs-studio steam-manjaro virtualbox wireshark-qt
+sudo pacman -S atom audacity bitwarden blender bless brasero discord exiftool git inkscape kdenlive lutris lxterminal nano obs-studio steam-manjaro virtualbox wireshark-qt
 
 
 
@@ -129,6 +138,11 @@ pip install kivy
 # if the packages you try to uninstall are not installed.
 # In that case it's ok just skip
 
+# gnome-terminal = replaced by lxterm
+# manjaro-hello = Not needed if not read at all
+# vim = replaced by nano
+
+sudo pacman -R gnome-terminal
 sudo pacman -R manjaro-hello
 sudo pacman -R vim
 
