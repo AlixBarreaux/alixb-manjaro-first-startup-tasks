@@ -97,13 +97,21 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 
 # Pacman
 sudo pacman -S atom audacity bitwarden blender bless brasero clipgrab flatpak git inkscape lutris obs-studio perl-image-exiftool persepolis shotcut steam-manjaro vim virtualbox wireshark-qt
+
 # Flatpak
 flatpak install libresprite vscodium
+
 # Custom packages
 cd /home/$username/Downloads
+# NOTE: SHOULD ADD A CHECK IF THIS FILENAME ALREADY EXISTS
+# AND FIND ANOTHER NAME (Very low probability it happens though)
+mkdir First_Startup_Tasks_Downloads
+cd First_Startup_Tasks_Downloads
+
 wget https://github.com/Lightcord/Lightcord/releases/download/v0.1.9/lightcord-linux-x86_64.AppImage
 wget https://freefr.dl.sourceforge.net/project/nikkhokkho/FileOptimizer/15.30.2661/FileOptimizerSetup.exe
 wget https://deac-fra.dl.sourceforge.net/project/dragonunpacker/Developers%20Tools/DLNG%20Decompiler/4.0.0%20Beta/dlngd400beta.7z
+
 
 
 # SPECIAL INSTALLATIONS
@@ -140,5 +148,4 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo pacman -R manjaro-hello
 sudo pacman -R microsoft-office-web-jak
 sudo pacman -R thunderbird
-sudo pacman -R vim
 sudo pacman -R xed
