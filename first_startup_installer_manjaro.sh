@@ -13,7 +13,8 @@
 # could simply skip to the next package to install and display an error
 # message in the terminal.
 
-
+# DO NOT MODIFY THIS SECTION
+username=$(whoami)
 
 
 # ESSENTIAL SYSTEM RELATED PACKAGES
@@ -21,23 +22,12 @@
 # Upgrade pacman database cache
 sudo pacman -Syy
 
-# Upgrade 
+# Upgrade
 sudo pacman -Syu
 
 # Package Builder (for the AUR packages with GIT)
 sudo pacman -S base-devel
 
-
-
-
-# DESKTOP ENVIRONMENTS - The way your Linux looks like
-# Cinnamon = Windows Like (but without the problems of Windows of course)
-# LXDE = Lightweight, Minimalist, High Performance
-
-# Please remove the desktop environment you already installed
-# from this line of code
-
-sudo pacman -S lxde
 
 
 
@@ -48,7 +38,7 @@ sudo pacman -S lxde
 
 # Official Packages
 
-# Bleachbit = Unused Data Cleaner
+# BleachBit = File System and Disk Space Cleaner
 # Deluge = Torrent Client
 # Etcher = Flash OS images to SD cards & USB drives
 # File Roller = Archive manager zip etc...
@@ -78,7 +68,7 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 
 
 
-# --------------------------------- OPTIONAL --------------------------------- 
+# --------------------------------- OPTIONAL ---------------------------------
 
 # These are additional packages to install
 
@@ -91,23 +81,29 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 # Blender = 3D Modelling
 # Bless = Hexadecimal Editor
 # Brasero = CD/DVD Burner
-# Discord = Internet Voice/Text Chat Client
+# Clipgrab = Video / Audio Downloader
+# Flatpak = Package Manager
 # Git = Version Control System
 # Inkscape = Vector Graphics Editor
-# KdenLive = Video Editor
 # Lutris = Video Game Manager
-# LXTerm = Minimalistic Linux Terminal
-# Nano = CLI Text Editor
 # OBS = Live Streaming/Video Recording Software
 # Perl Image Exiftool = Reader and rewriter of EXIF info
+# Persepolis = Download Manager
+# Shotcut = Video Editor
 # Steam = Gaming Platform - Special version for Manjaro
 # Virtualbox = Virtual Machine Host Program
 # Wireshark = Network Protocol Analyzer Tool
 
 
-sudo pacman -S atom audacity bitwarden blender bless brasero discord git inkscape kdenlive lutris lxterminal nano obs-studio perl-image-exiftool steam-manjaro virtualbox wireshark-qt
-
-
+# Pacman
+sudo pacman -S atom audacity bitwarden blender bless brasero clipgrab flatpak git inkscape lutris obs-studio perl-image-exiftool persepolis shotcut steam-manjaro vim virtualbox wireshark-qt
+# Flatpak
+flatpak install libresprite vscodium
+# Custom packages
+cd /home/$username/Downloads
+wget https://github.com/Lightcord/Lightcord/releases/download/v0.1.9/lightcord-linux-x86_64.AppImage
+wget https://freefr.dl.sourceforge.net/project/nikkhokkho/FileOptimizer/15.30.2661/FileOptimizerSetup.exe
+wget https://deac-fra.dl.sourceforge.net/project/dragonunpacker/Developers%20Tools/DLNG%20Decompiler/4.0.0%20Beta/dlngd400beta.7z
 
 
 # SPECIAL INSTALLATIONS
@@ -128,9 +124,6 @@ sudo pacman -S flint
 # Install RustLang
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# Install some Python Libraries
-pip install kivy
-
 
 
 # CUSTOM PACKAGES TO REMOVE
@@ -138,14 +131,12 @@ pip install kivy
 # if the packages you try to uninstall are not installed.
 # In that case it's ok just skip
 
-# gnome-terminal = replaced by lxterm
 # manjaro-hello = Not needed if not read at all
 # microsoft-office-web-jak = Microsoft Office Suite -> DELETE!
 # Thunderbird = Mail Client on machine. Replaced by webmail in browser.
 # vim = replaced by nano
 # xed = replaced by leafpad
 
-sudo pacman -R gnome-terminal
 sudo pacman -R manjaro-hello
 sudo pacman -R microsoft-office-web-jak
 sudo pacman -R thunderbird
