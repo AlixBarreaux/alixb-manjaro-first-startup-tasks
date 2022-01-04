@@ -75,6 +75,7 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 
 # CUSTOM SOFTWARES
 
+# Aegisub = Subtitle Editor
 # Atom = Code IDE
 # Audacity = Sound Editor
 # Bitwarden = Password Manager
@@ -89,6 +90,7 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 # OBS = Live Streaming/Video Recording Software
 # Perl Image Exiftool = Reader and rewriter of EXIF info
 # Persepolis = Download Manager
+# Poedit = Translation Editor
 # Shotcut = Video Editor
 # Steam = Gaming Platform - Special version for Manjaro
 # Virtualbox = Virtual Machine Host Program
@@ -96,7 +98,7 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 
 
 # Pacman
-sudo pacman -S atom audacity bitwarden blender bless brasero clipgrab flatpak git inkscape lutris obs-studio perl-image-exiftool persepolis shotcut steam-manjaro vim virtualbox wireshark-qt
+sudo pacman -S aegisub atom audacity bitwarden blender bless brasero clipgrab flatpak git inkscape lutris obs-studio perl-image-exiftool persepolis poedit shotcut steam-manjaro vim virtualbox wireshark-qt
 
 # Flatpak
 flatpak install libresprite vscodium
