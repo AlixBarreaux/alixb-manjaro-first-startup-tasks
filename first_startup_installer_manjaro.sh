@@ -142,7 +142,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # manjaro-hello = Not needed if not read at all
 # microsoft-office-web-jak = Microsoft Office Suite -> DELETE!
 # Thunderbird = Mail Client on machine. Replaced by webmail in browser.
-# vim = replaced by nano
 # xed = replaced by leafpad
 
 sudo pacman -R manjaro-hello
