@@ -67,6 +67,7 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 # --------- PACKAGES FROM PACKAGE MANAGERS ---------
 
 # Aegisub = Subtitle Editor
+# AppImage Launcher = elper for integrating Appimages
 # Atom = Code IDE
 # Audacity = Sound Editor
 # Bitwarden = Password Manager
@@ -89,7 +90,7 @@ sudo pacman -S bleachbit deluge etcher file-roller firefox gimp gparted ksysguar
 
 
 # Pacman
-sudo pacman -S aegisub atom audacity bitwarden blender bless brasero clipgrab flatpak git inkscape lutris obs-studio perl-image-exiftool persepolis poedit shotcut steam-manjaro vim virtualbox wireshark-qt
+sudo pacman -S aegisub appimagelauncher  atom audacity bitwarden blender bless brasero clipgrab flatpak git inkscape lutris obs-studio perl-image-exiftool persepolis poedit shotcut steam-manjaro vim virtualbox wireshark-qt
 
 # Flatpak
 flatpak install libresprite vscodium
